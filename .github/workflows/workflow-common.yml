@@ -56,6 +56,9 @@ jobs:
           pip install --upgrade pip
           pip install -r ci/requirements.txt
 
+      - name: Prepare devpypi
+        run: ./ci/scripts/docker_setup.sh
+
       - name: Unit tests
         run: ./run.py -u
 
